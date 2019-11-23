@@ -1,3 +1,4 @@
+const shell = require("shelljs");
 // the json file (model topology) has a reference to the bin file (model weights)
 const checkpointURL =
   "https://teachablemachine.withgoogle.com/models/2Smm-0ED/model.json";
@@ -60,7 +61,17 @@ async function predictVideo(image) {
 	NoOfContinuousSlouchingFrames = NoOfContinuousSlouchingFrames + 1;
 	if(NoOfContinuousSlouchingFrames==100){
 	var audio = new Audio('audio_file.mp3');
-	audio.play();
+		audio.play();
+		/*linuxLockscreen.set('unicorn.jpg', function (err) {
+    console.log('done');
+		});*/
+/*		lockscreen((err, stdout) => {
+  if(err) {
+    console.log('there was some error', err);
+  }
+});*/
+	shell.exec('./lock.sh');
+		//	shell.echo('hello world');
 	NoOfContinuousSlouchingFrames = 0;
 	}
     }
