@@ -55,6 +55,10 @@ async function predictVideo(image) {
     // Show the result
     const res = select('#res'); // select <span id="res">
     res.html(prediction[0].className);
+    if(prediction[0].className == "Slouching"){
+	var audio = new Audio('audio_file.mp3');
+	audio.play();
+    }
   
     // Show the probability
     const prob = select('#prob'); // select <span id="prob">
