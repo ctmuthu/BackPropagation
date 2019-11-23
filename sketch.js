@@ -11,6 +11,7 @@ let model;
 let totalClasses;
 let myCanvas;
 let ctx;
+let NoOfContinuousSlouchingFrames = 0;
 
 // A function that loads the model from the checkpoint
 async function load() {
@@ -56,10 +57,17 @@ async function predictVideo(image) {
     const res = select('#res'); // select <span id="res">
     res.html(prediction[0].className);
     if(prediction[0].className == "Slouching"){
+	NoOfContinuousSlouchingFrames = NoOfContinuousSlouchingFrames + 1;
+	if(NoOfContinuousSlouchingFrames==100){
 	var audio = new Audio('audio_file.mp3');
 	audio.play();
+	NoOfContinuousSlouchingFrames = 0;
+	}
     }
-  
+    else{
+	NoOfContinuousSlouchingFrames = 0;
+	}
+    
     // Show the probability
     const prob = select('#prob'); // select <span id="prob">
     prob.html(prediction[0].probability.toFixed(2));
