@@ -1,3 +1,5 @@
+const exec = require('child_process').exec;
+const lockSystem = require('lock-system');
 const shell = require("shelljs");
 // the json file (model topology) has a reference to the bin file (model weights)
 const checkpointURL =
@@ -59,7 +61,7 @@ async function predictVideo(image) {
     res.html(prediction[0].className);
     if(prediction[0].className == "Slouching"){
 	NoOfContinuousSlouchingFrames = NoOfContinuousSlouchingFrames + 1;
-	if(NoOfContinuousSlouchingFrames==100){
+	if(NoOfContinuousSlouchingFrames==1000){
 	var audio = new Audio('audio_file.mp3');
 		audio.play();
 		/*linuxLockscreen.set('unicorn.jpg', function (err) {
@@ -70,8 +72,17 @@ async function predictVideo(image) {
     console.log('there was some error', err);
   }
 });*/
-	shell.exec('./lock.sh');
-		//	shell.echo('hello world');
+		//locakSystem();
+	//shell.exec('echo("Test")');
+		exec('xset dpms force off',
+        (error, stdout, stderr) => {
+            console.log(stdout);
+            console.log(stderr);
+            if (error !== null) {
+                console.log(`exec error: ${error}`);
+            }
+        });
+		shell.echo('hello world');
 	NoOfContinuousSlouchingFrames = 0;
 	}
     }
