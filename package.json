@@ -1,0 +1,22 @@
+{
+  "name": "backpropagation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MuthuramanCT/BackPropagation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MuthuramanCT/BackPropagation/issues"
+  },
+  "homepage": "https://github.com/MuthuramanCT/BackPropagation#readme",
+  "dependencies": {
+    "electron": "^7.1.2"
+  }
+}
