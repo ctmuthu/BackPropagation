@@ -2,10 +2,10 @@ const exec = require('child_process').exec;
 const shell = require("shelljs");
 // the json file (model topology) has a reference to the bin file (model weights)
 const checkpointURL =
-	"https://teachablemachine.withgoogle.com/models/ZeIDjcgt/model.json";
+	"https://teachablemachine.withgoogle.com/models/yOVUjET5/model.json";
 // the metatadata json file contains the text labels of your model and additional information
 const metadataURL =
-	"https://teachablemachine.withgoogle.com/models/ZeIDjcgt/metadata.json";
+	"https://teachablemachine.withgoogle.com/models/yOVUjET5/metadata.json";
 
 const size = 300;
 let webcamEl;
