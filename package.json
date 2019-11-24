@@ -19,7 +19,6 @@
   "homepage": "https://github.com/MuthuramanCT/BackPropagation#readme",
   "dependencies": {
     "electron": "^7.1.2",
-    "lock-system": "^2.0.0",
     "shelljs": "^0.8.3"
   }
 }
