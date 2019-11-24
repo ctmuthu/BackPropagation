@@ -1,6 +1,6 @@
 {
   "name": "backpropagation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An oppertunity to cure computer postural strain syndrome",
   "main": "main.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/MuthuramanCT/BackPropagation.git"
   },
-  "author": "",
+  "author": "Team Backpropagation",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MuthuramanCT/BackPropagation/issues"
