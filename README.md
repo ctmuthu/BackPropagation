@@ -4,5 +4,5 @@
 2. Perform npm install.
 3. run npm start
 
-We have also create a npm package.
+We have also created an npm package.
 - npm i backpropagation
